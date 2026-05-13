@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
+const consultationUrl = 'https://aetherhouse.info/contact/';
+
 const questions = [
   {
     id: 1,
@@ -250,7 +252,7 @@ export default function App() {
               <p className="mt-5 text-xl font-bold leading-9 text-[#5f4a37]">{result.catch}</p>
               <p className="mt-5 leading-9 text-[#5f4a37]">{result.body}</p>
               <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-                <a href="https://forms.gle/yYY8CqTCqjYnZ3756" target="_blank" rel="noreferrer" className="rounded-2xl bg-[#f1992d] px-8 py-5 text-center text-xl font-bold tracking-[0.12em] text-white shadow-xl shadow-orange-200 transition hover:-translate-y-0.5 hover:bg-[#e58c21]">
+                <a href={consultationUrl} target="_blank" rel="noreferrer" className="rounded-2xl bg-[#f1992d] px-8 py-5 text-center text-xl font-bold tracking-[0.12em] text-white shadow-xl shadow-orange-200 transition hover:-translate-y-0.5 hover:bg-[#e58c21]">
                   個別相談してみる　›
                 </a>
                 <button onClick={reset} className="rounded-2xl border border-[#9cae73] bg-white px-8 py-5 text-xl font-bold tracking-[0.08em] text-[#6f8748] transition hover:bg-[#f2f7e8]">
