@@ -199,40 +199,37 @@ export default function App() {
 
   if (!started) {
     return (
-      <main className="min-h-screen bg-[#fff8ed] p-4 md:p-8">
-        <section className="mx-auto grid min-h-[calc(100vh-4rem)] max-w-7xl overflow-hidden rounded-[2rem] border border-[#dfc99f] bg-white shadow-2xl md:grid-cols-[0.88fr_1.12fr]">
-          <div className="flex flex-col justify-center p-8 md:p-12">
-            <p className="mb-5 inline-flex w-fit rounded-full border border-[#c9d7a2] bg-[#f7fbef] px-5 py-2 text-sm font-bold tracking-[0.18em] text-[#6f8748]">
-              ゆずりえプロジェクト
-            </p>
-            <h1 className="font-serif text-6xl font-bold tracking-[0.12em] text-[#3c2b1f] md:text-8xl">ゆずりえ</h1>
-            <h2 className="mt-2 font-serif text-5xl font-bold tracking-[0.1em] md:text-7xl">
-              <span className="text-[#e58c21]">適性</span><span className="text-[#6f8748]">診断</span>
-            </h2>
-            <p className="mt-6 text-xl font-semibold leading-9 text-[#4a3828]">
-              家族の未来に、どんな灯りをともしたいですか？
-            </p>
-            <div className="mt-6 rounded-3xl border border-[#eadbb8] bg-[#fffdf8] p-6 text-lg leading-9 text-[#4a3828]">
-              10の質問に答えるだけで、あなたに合う住まい方のヒントが見えてきます。家を買うかどうかではなく、安心して選べる未来を見つけるための診断です。
-            </div>
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <button onClick={() => setStarted(true)} className="rounded-2xl bg-[#f1992d] px-8 py-5 text-xl font-bold tracking-[0.12em] text-white shadow-xl shadow-orange-200 transition hover:-translate-y-0.5 hover:bg-[#e58c21]">
-                診断をはじめる　›
-              </button>
-              <button onClick={() => setAbout(!about)} className="rounded-2xl border border-[#9cae73] bg-white px-8 py-5 text-xl font-bold tracking-[0.08em] text-[#6f8748] transition hover:bg-[#f2f7e8]">
-                ゆずりえとは？
-              </button>
-            </div>
-            <p className="mt-5 text-sm text-[#6b5a48]">所要時間：約3分</p>
-            {about && (
-              <div className="mt-6 rounded-3xl border border-[#d8c795] bg-[#f7fbef] p-5 leading-8 text-[#4a3828]">
-                今の暮らしを大切にしながら、将来の“わが家”につながる新しい住まい方です。空き家を活かし、住む人に安心を届け、地域にもう一度灯りをともす。そんな想いから生まれたプロジェクトです。
-              </div>
-            )}
+      <main className="min-h-screen bg-[#fff8ed] px-4 py-6 md:px-8 md:py-10">
+        <section className="mx-auto max-w-6xl">
+          <div className="overflow-hidden rounded-[2rem] border border-[#dfc99f] bg-white shadow-2xl">
+            <img
+              src="/yuzurie-top-main.png"
+              alt="ゆずりえ適性診断 トップ画像"
+              className="block h-auto w-full"
+            />
           </div>
-          <div className="relative min-h-[420px] bg-[#fff4df]">
-            <img src="/yuzurie-top-main.png" alt="ゆずりえ適性診断 トップ画像" className="h-full w-full object-cover" />
+
+          <div className="mx-auto mt-6 flex max-w-3xl flex-col gap-4 sm:flex-row sm:justify-center">
+            <button
+              onClick={() => setStarted(true)}
+              className="rounded-2xl bg-[#f1992d] px-10 py-5 text-xl font-bold tracking-[0.12em] text-white shadow-xl shadow-orange-200 transition hover:-translate-y-0.5 hover:bg-[#e58c21]"
+            >
+              診断をはじめる　›
+            </button>
+            <button
+              onClick={() => setAbout(!about)}
+              className="rounded-2xl border border-[#9cae73] bg-white px-10 py-5 text-xl font-bold tracking-[0.08em] text-[#6f8748] shadow-sm transition hover:bg-[#f2f7e8]"
+            >
+              ゆずりえとは？
+            </button>
           </div>
+
+          {about && (
+            <div className="mx-auto mt-6 max-w-3xl rounded-3xl border border-[#d8c795] bg-white/90 p-6 leading-8 text-[#4a3828] shadow-sm">
+              <p className="mb-2 text-xl font-bold text-[#6f8748]">ゆずりえとは？</p>
+              今の暮らしを大切にしながら、将来の“わが家”につながる新しい住まい方です。空き家を活かし、住む人に安心を届け、地域にもう一度灯りをともす。そんな想いから生まれたプロジェクトです。
+            </div>
+          )}
         </section>
       </main>
     );
